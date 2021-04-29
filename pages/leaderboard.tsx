@@ -5,19 +5,8 @@ export default ({ people }: { people: Person[] }) => {
 		<section className="text-gray-600 body-font overflow-hidden">
 			<div className="container px-5 py-24 mx-auto">
 				<div className="-my-8 divide-y-2 divide-gray-100">
-					<PersonItem
-						person={{
-							avatar: "helloavatar",
-							coins: 1000,
-							deadtrees: 100,
-							discord_tag: "no",
-							id: 123,
-							level: 222,
-							trees: 2,
-						}}
-					/>
 					{people.map((value,index) => {
-						return <PersonItem key={index} person={value}/>
+						return <PersonItem key={index} index={index+1} person={value}/>
 					})}
 				</div>
 			</div>
