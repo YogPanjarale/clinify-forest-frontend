@@ -12,7 +12,7 @@ export default ({ people }: { people: Person[] }) => {
 };
 export async function getServerSideProps({ params }) {
 	const req = await fetch(
-		`https://clinifyforest.herokuapp.com/clinifyforest/api/getlb/15?format=json`
+		`https://clinifyforest.herokuapp.com/clinifyforest/api/getlb/50?format=json`
 	);
 	const data: Person[] = await req.json();
 
